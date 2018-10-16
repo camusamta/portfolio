@@ -1,0 +1,368 @@
+* {
+
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+
+}
+
+html {
+
+  display: flex;
+  justify-content: center;
+}
+
+body {
+
+  width: 960px;
+
+}
+
+.flex-container {
+
+
+}
+
+/* Colours */
+
+.yellow {
+
+background-color: #F7D16F;
+
+}
+
+.green-text {
+
+  color: #4EAD69;
+}
+
+.soft-green {
+
+  background-color: #F5F3F1;
+
+}
+
+.soft-blue {
+
+  background-color: #EDF2F2;
+
+}
+
+a {
+
+  text-decoration: none;
+
+}
+
+
+h1 {
+
+/* font-size: 48px; */
+color: rgba(0,0,0,0.65);
+font-family: 'IM Fell Double Pica', serif;
+letter-spacing: 1.13px;
+font-size: 66px;
+
+}
+
+h2 {
+
+text-transform: uppercase;
+font-weight: 400;
+font-size: 20px;
+color: rgba(0,0,0,0.6);
+
+}
+
+h3 {
+
+  /* font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  color: rgba(0,0,0,0.65); */
+
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: rgba(0,0,0,0.65);
+
+  /* font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  color: rgba(0,0,0,0.65); */
+}
+
+p, h2, h3, .category-tag {
+
+  font-family: 'Lato', sans-serif;
+
+
+}
+
+
+/* HEADER */
+
+header {
+
+  width: 100%;
+  margin-top: 80px;
+  margin-bottom: 60px;
+  /* background-color: #f9f9f9; */
+}
+
+.photo-name {
+
+  display: flex;
+  align-items: center;
+  margin: 0 0 16px 0;
+}
+
+.photo-circle {
+
+width: 80px;
+height: 80px;
+border-radius: 50%;
+background-image: url('img/sam-face.jpg');
+background-size: cover;
+
+}
+
+.welcome, .reply {
+
+  font-size: 16px;
+  width: 316px;
+  padding: 8px;
+  line-height: 16px;
+  /* border-radius: 16px; */
+  border-radius: 8px;
+  display: flex;
+  color: #5C5649;
+  align-items: center;
+  /* justify-content: center; */
+  margin-left: 8px;
+  /* text-transform: uppercase; */
+
+
+}
+
+.reply {
+
+  border: 1px solid rgba(0,0,0,0.2);
+  margin-top: 4px;
+  display: none;
+}
+
+.welcome::before {
+
+  content: "";
+  width: 1px;
+  height: 0px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #F7D16F;
+  position: relative;
+  right: 16px;
+  top: 3px;
+
+}
+
+.chat {
+
+  margin-left: 4px;
+}
+
+.rotated {
+
+  transform: rotate(15deg);
+  margin-bottom: 1px;
+}
+
+.intro {
+
+  margin-top: 32px;
+  font-size: 20px;
+  font-family: 'IM Fell Double Pica', serif !important;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  color: rgba(0,0,0,0.75);
+}
+
+
+/* CARDS */
+
+article {
+
+  /* New Addition */
+
+  margin-top: 24px;
+  display: flex;
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.02);
+  /* margin-bottom: 32px; */
+}
+
+.img-container {
+
+  width: 280px;
+  height: 232px;
+  overflow: hidden;
+  cursor: pointer;
+  /* border-radius: 4px; */
+  /* box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15); */
+  transition: all 0.2s ease-out;
+}
+
+article:hover {
+
+background-color: rgba(0,0,0,0.02);
+/* border-right: 4px solid green; */
+}
+
+article:hover .img-container {
+
+  transform: scale(1.06);
+  background-color: pink;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+
+}
+
+article:hover .article-text {
+
+padding-left: 8px;
+
+}
+
+/* article:hover img {
+
+transform: scale(1.06);
+
+} */
+
+.work-article:hover h3 {
+
+  color: #F76F8E;
+  text-decoration: underline;
+}
+
+.project-article:hover h3 {
+
+  color: #BA6FF7;
+}
+
+img {
+
+  width: 70%;
+  height: auto;
+  padding-top: 24px;
+  display: block;
+  margin: auto;
+  transition: all 0.2s ease-out;
+
+}
+
+#full {
+
+  width: 150% !important;
+  height: auto;
+  position: relative;
+  top: -96px;
+  left: -16px;
+}
+
+.article-text{
+
+  margin-left: 32px;
+  /* New addition */
+  padding-top: 24px;
+  transition: padding-left 0.2s ease;
+  /* ^ this was previously 0.3s */
+}
+
+.article-text:hover {
+
+padding-left: 8px;
+
+}
+
+.category-tag {
+
+  font-size: 15px;
+  /* width: 180px; */
+  padding: 8px 16px 8px 16px;
+  border-radius: 4px;
+  display: flex;
+  color: #FFF;
+  align-items: center;
+  text-transform: uppercase;
+
+}
+
+.work, .project {
+
+
+  width: 88px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.work {
+
+background-color: #F76F8E;
+
+}
+
+.project {
+
+  background-color: #BA6FF7;
+
+}
+
+.icon-and-label {
+
+  display: flex;
+  align-items: baseline;
+  color: rgba(0,0,0,0.5);
+  font-weight: 700;
+  margin-top: 16px;
+  display: flex;
+  align-items: unset;
+}
+
+.fas {
+
+  color: rgba(0,0,0,0.3);
+  /* 0.2 is also quite nice */
+}
+
+.fa-mobile-alt, .fa-desktop {
+
+font-size: 22px;
+
+
+}
+
+.responsive-set {
+
+  margin-right: 8px;
+}
+
+.icon-label {
+
+  margin-left: 8px;
+
+
+}
+
+.my-involvement {
+  margin-top: 16px;
+  font-size: 18px;
+  color: rgba(0,0,0,0.6) !important;
+}
+/* main {
+
+  display: flex;
+  justify-content: flex-start;
+} */
